@@ -1,0 +1,32 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+@import "primary/asides";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@import "primary/comments";
+
+
+.leader {
+	float:left;
+	margin: 1em 1em 0 0;
+	
+	.leader_thumb {
+		max-width: 250px;
+		max-height: 320px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+		}
+	}
+}
