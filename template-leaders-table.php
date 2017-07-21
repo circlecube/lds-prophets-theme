@@ -14,11 +14,11 @@
 
  get_header();
 
-// delete_transient( 'leader_table' );
+delete_transient( 'leader_table' );
 
-if ( false === ( $json = get_transient( 'leader_table' ) ) ) {
+if ( false === ( $leader_table = get_transient( 'leader_table' ) ) ) {
 	
-	$json = 'var leaders = [';
+	$leader_table = 'var leaders = [';
 
 	$leader_args = array(
 		'post_type' => 'leader',
