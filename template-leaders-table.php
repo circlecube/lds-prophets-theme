@@ -14,17 +14,30 @@
 
  get_header();
 
-delete_transient( 'leader_table' );
+// delete_transient( 'leader_table' );
 
 if ( false === ( $leader_table = get_transient( 'leader_table' ) ) ) {
 	
-	$leader_table = 'var leaders = [';
-
 	$leader_args = array(
 		'post_type' => 'leader',
 		'posts_per_page' => -1,
-    	'orderby' => 'meta_value',
-    	'meta_key' => 'ordained_date'
+		'meta_query' => array(
+			'relation'	=> 'AND',
+			'ordination_clause' => array(
+				'key'		=> 'ordained_date',
+				'compare'	=> 'EXISTS',
+				'type'		=> 'DATE',
+			),
+			'seniority_clause' => array(
+				'key'		=> 'quorum_seniority',
+				'compare'	=> 'EXISTS',
+				'type'		=> 'NUMERIC',
+			),
+		),
+		'orderby'	=> array(
+			'ordination_clause'	=> 'DESC',
+			'seniority_clause'	=> 'DESC',
+		),
 	);
 	$leader_query = new WP_Query( $leader_args );
 	// The Loop
@@ -37,6 +50,7 @@ if ( false === ( $leader_table = get_transient( 'leader_table' ) ) ) {
 					<th>Name</th>
 					<th>Birthdate</th>
 					<th>Ordained</th>
+					<th>Seniority</th>
 					<th>Prophet</th>
 					<th>Enddate</th>
 					<th>Hometown</th>
@@ -68,12 +82,13 @@ if ( false === ( $leader_table = get_transient( 'leader_table' ) ) ) {
 			}
 			$groups = implode(",", $leader_group);
 			
-				
+			$seniority = get_field('quorum_seniority') > 0 ? get_field('quorum_seniority') : '';
 			$leader_table .= "<tr>
 				<td><img src='" . $main_image['sizes']['thumbnail'] . "'></td>
 				<td><a href='" . get_the_permalink() . "'>" . get_the_title() . "</a></td>
 				<td data-sort-value='" . get_field('birthdate') . "'>" . get_field('birthdate') . "</td>
 				<td data-sort-value='" . get_field('ordained_date') . "'>" . get_field('ordained_date') . "</td>
+				<td data-sort-value='" . $seniority . "'>" . $seniority . "</td>
 				<td data-sort-value='" . get_field('president_date') . "'>" . get_field('president_date') . "</td>
 				<td data-sort-value='" . $end_date . "'>" . $end_date . "</td>
 				<td>" . get_field('hometown') . "</td>

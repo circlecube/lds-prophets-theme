@@ -92,7 +92,8 @@
             "ajax": 0,
             "placeholder": "",
             "disabled": 0,
-            "readonly": 0
+            "readonly": 0,
+            "return_format": "value"
         },
         {
             "key": "field_5523e2d7a6236",
@@ -121,7 +122,8 @@
             "ajax": 0,
             "placeholder": "",
             "disabled": 0,
-            "readonly": 0
+            "readonly": 0,
+            "return_format": "value"
         },
         {
             "key": "field_5571f985c9e02",
@@ -137,7 +139,10 @@
                 "id": ""
             },
             "message": "Currently Living",
-            "default_value": 0
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_5522d866a7110",
@@ -372,7 +377,10 @@
                 "id": ""
             },
             "message": "Excommunicated or term ended before death?",
-            "default_value": 0
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         },
         {
             "key": "field_5571fbcfc9e04",
@@ -426,32 +434,32 @@
         },
         {
             "key": "field_5523e5c347c57",
-            "label": "Quorum Seniority",
+            "label": "Seniority",
             "name": "quorum_seniority",
-            "type": "text",
+            "type": "number",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
                     {
-                        "field": "field_5523e2d7a6236",
+                        "field": "field_5571f985c9e02",
                         "operator": "==",
-                        "value": "apostle"
+                        "value": "1"
                     }
                 ]
             ],
             "wrapper": {
-                "width": 50,
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "2nd",
+            "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "min": "",
+            "max": "",
+            "step": ""
         },
         {
             "key": "field_5523e61747c58",
@@ -734,7 +742,8 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "insert": "append"
         },
         {
             "key": "field_5571f7d8d4bcc",
@@ -749,8 +758,8 @@
                 "class": "",
                 "id": ""
             },
-            "min": "",
-            "max": "",
+            "min": 0,
+            "max": 0,
             "layout": "table",
             "button_label": "Add Position",
             "sub_fields": [
@@ -785,7 +794,8 @@
                     "ajax": 0,
                     "placeholder": "",
                     "disabled": 0,
-                    "readonly": 0
+                    "readonly": 0,
+                    "return_format": "value"
                 },
                 {
                     "key": "field_5571f7e2d4bcd",
@@ -821,7 +831,8 @@
                     "return_format": "F j, Y",
                     "first_day": 0
                 }
-            ]
+            ],
+            "collapsed": ""
         }
     ],
     "location": [
@@ -853,5 +864,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1442500881
+    "modified": 1513693365
 }
