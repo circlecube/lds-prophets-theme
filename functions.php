@@ -187,6 +187,7 @@ add_action( 'pre_get_posts', 'show_all_leaders_sorted', 1 );
 function publish_leader_update_cache( $ID, $post ) {
 	delete_transient( 'leader_json' );
 	delete_transient( 'leader_table' );
+	delete_transient( 'cclds_all_leaders' );
 }
 
 add_action( 'save_post', 'publish_leader_update_cache', 10, 3 );
