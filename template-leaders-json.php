@@ -98,6 +98,8 @@ if ( false === ( $json = get_transient( 'leader_json' ) ) ) {
 			$leader->img2 = $youth_image['sizes']['medium'];
 			$leader->groups = $groups;
 			$leader->served_with = $served_with;
+			$leader->polygamist = get_field( 'polygamist' );
+			$leader->number_of_wives = get_field( 'number_of_wives' );
 
 			array_push($leaders, $leader);
 			

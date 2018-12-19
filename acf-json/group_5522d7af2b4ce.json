@@ -1,868 +1,882 @@
-{
-    "key": "group_5522d7af2b4ce",
-    "title": "Leaders Data",
-    "fields": [
-        {
-            "key": "field_5522d813a710c",
-            "label": "First Name",
-            "name": "first_name",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d819a710d",
-            "label": "Middle Name",
-            "name": "middle_name",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d81fa710e",
-            "label": "Last Name",
-            "name": "last_name",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d82ba710f",
-            "label": "Initial",
-            "name": "initial",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "middle_name": "Middle Name",
-                "first_name": "First Name",
-                "none": "None"
-            },
-            "default_value": {
-                "middle_name": "middle_name"
-            },
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "disabled": 0,
-            "readonly": 0,
-            "return_format": "value"
-        },
-        {
-            "key": "field_5523e2d7a6236",
-            "label": "Type",
-            "name": "type",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "prophet": "Prophet",
-                "apostle": "Apostle",
-                "general-authority": "General Authority"
-            },
-            "default_value": {
-                "apostle": "apostle"
-            },
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "disabled": 0,
-            "readonly": 0,
-            "return_format": "value"
-        },
-        {
-            "key": "field_5571f985c9e02",
-            "label": "Living",
-            "name": "living",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "message": "Currently Living",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5522d866a7110",
-            "label": "Current Position",
-            "name": "position",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5571f985c9e02",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d7e7a710b",
-            "label": "Birthdate",
-            "name": "birthdate",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "display_format": "F j, Y",
-            "return_format": "F j, Y",
-            "first_day": 0
-        },
-        {
-            "key": "field_5522d87ca7111",
-            "label": "Ordained Date",
-            "name": "ordained_date",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "display_format": "F j, Y",
-            "return_format": "F j, Y",
-            "first_day": 0
-        },
-        {
-            "key": "field_5523e64e47c59",
-            "label": "President Date",
-            "name": "president_date",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5523e2d7a6236",
-                        "operator": "==",
-                        "value": "prophet"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "display_format": "F j, Y",
-            "return_format": "F j, Y",
-            "first_day": 0
-        },
-        {
-            "key": "field_5522d899a7112",
-            "label": "Death Date",
-            "name": "death_date",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5571f985c9e02",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "display_format": "F j, Y",
-            "return_format": "F j, Y",
-            "first_day": 0
-        },
-        {
-            "key": "field_5522d8a6a7113",
-            "label": "Hometown",
-            "name": "hometown",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5523ea87accc8",
-            "label": "Ordained at Age",
-            "name": "ordained_at_age",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5523ea96accc9",
-            "label": "Prophet at Age",
-            "name": "prophet_at_age",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5523e2d7a6236",
-                        "operator": "==",
-                        "value": "prophet"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5523ea9faccca",
-            "label": "Age (or age at Death)",
-            "name": "died_at_age",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5571f985c9e02",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5571f9aec9e03",
-            "label": "Excommunicated",
-            "name": "excommunicated",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "message": "Excommunicated or term ended before death?",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5571fbcfc9e04",
-            "label": "Term End Date",
-            "name": "excommunication_date",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5571f9aec9e03",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "display_format": "F j, Y",
-            "return_format": "F j, Y",
-            "first_day": 0
-        },
-        {
-            "key": "field_55782723bae4c",
-            "label": "Readmitted Date",
-            "name": "readmitted_date",
-            "type": "date_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5571f9aec9e03",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 25,
-                "class": "",
-                "id": ""
-            },
-            "display_format": "F j, Y",
-            "return_format": "F j, Y",
-            "first_day": 0
-        },
-        {
-            "key": "field_5523e5c347c57",
-            "label": "Seniority",
-            "name": "quorum_seniority",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5571f985c9e02",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": ""
-        },
-        {
-            "key": "field_5523e61747c58",
-            "label": "Prophet Number",
-            "name": "prophet_number",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5523e2d7a6236",
-                        "operator": "==",
-                        "value": "prophet"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": 50,
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "2nd",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d90fa711c",
-            "label": "Reason Called",
-            "name": "reason_called",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5576e6c359903",
-            "label": "Reason Terminated",
-            "name": "reason_terminated",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_5571f9aec9e03",
-                        "operator": "==",
-                        "value": "1"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Excommunicated",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d8e6a7117",
-            "label": "Conference Talks",
-            "name": "conference_talks",
-            "type": "number",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": "",
-            "max": "",
-            "step": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d8f3a7118",
-            "label": "Profession",
-            "name": "profession",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d8fca7119",
-            "label": "Military",
-            "name": "military",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d904a711a",
-            "label": "Education",
-            "name": "education",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d908a711b",
-            "label": "Mission",
-            "name": "mission",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
-        },
-        {
-            "key": "field_5522d8ada7114",
-            "label": "Main Image",
-            "name": "main_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5522d8cba7115",
-            "label": "Youth Image",
-            "name": "youth_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5522d8d7a7116",
-            "label": "Latest Image",
-            "name": "latest_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_55252f3215a88",
-            "label": "Images",
-            "name": "images",
-            "type": "gallery",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "min": "",
-            "max": "",
-            "preview_size": "thumbnail",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "insert": "append"
-        },
-        {
-            "key": "field_5571f7d8d4bcc",
-            "label": "Positions",
-            "name": "positions",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Add Position",
-            "sub_fields": [
-                {
-                    "key": "field_5571f835d4bcf",
-                    "label": "Position",
-                    "name": "position",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": 33,
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "President of The Church of Jesus Christ of Latter-day Saints": "President of The Church of Jesus Christ of Latter-day Saints",
-                        "First Counselor, First Presidency": "First Counselor, First Presidency",
-                        "Second Counselor, First Presidency": "Second Counselor, First Presidency",
-                        "Counselor in the First Presidency": "Counselor in the First Presidency",
-                        "President of the Quorum of the Twelve Apostles": "President of the Quorum of the Twelve Apostles",
-                        "Acting President of the Quorum of the Twelve Apostles": "Acting President of the Quorum of the Twelve Apostles",
-                        "Assistant to the Quorum of the Twelve Apostles": "Assistant to the Quorum of the Twelve Apostles"
-                    },
-                    "default_value": {
-                        "": ""
-                    },
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "disabled": 0,
-                    "readonly": 0,
-                    "return_format": "value"
-                },
-                {
-                    "key": "field_5571f7e2d4bcd",
-                    "label": "Position Start Date",
-                    "name": "position_start_date",
-                    "type": "date_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": 33,
-                        "class": "",
-                        "id": ""
-                    },
-                    "display_format": "F j, Y",
-                    "return_format": "F j, Y",
-                    "first_day": 0
-                },
-                {
-                    "key": "field_5571f81cd4bce",
-                    "label": "Position End Date",
-                    "name": "position_end_date",
-                    "type": "date_picker",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": 33,
-                        "class": "",
-                        "id": ""
-                    },
-                    "display_format": "F j, Y",
-                    "return_format": "F j, Y",
-                    "first_day": 0
-                }
-            ],
-            "collapsed": ""
-        }
-    ],
-    "location": [
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "leader"
-            }
-        ]
-    ],
-    "menu_order": 0,
-    "position": "normal",
-    "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": [
-        "the_content",
-        "excerpt",
-        "custom_fields",
-        "discussion",
-        "comments",
-        "author",
-        "format",
-        "page_attributes",
-        "categories",
-        "tags",
-        "send-trackbacks"
-    ],
-    "active": 1,
-    "description": "",
-    "modified": 1513693365
-}
+[{
+	"key": "group_5522d7af2b4ce",
+	"title": "Leaders Data",
+	"fields": [{
+			"key": "field_5522d813a710c",
+			"label": "First Name",
+			"name": "first_name",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d819a710d",
+			"label": "Middle Name",
+			"name": "middle_name",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d81fa710e",
+			"label": "Last Name",
+			"name": "last_name",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d82ba710f",
+			"label": "Initial",
+			"name": "initial",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"middle_name": "Middle Name",
+				"first_name": "First Name",
+				"none": "None"
+			},
+			"default_value": {
+				"middle_name": "middle_name"
+			},
+			"allow_null": 0,
+			"multiple": 0,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"disabled": 0,
+			"readonly": 0,
+			"return_format": "value"
+		},
+		{
+			"key": "field_5523e2d7a6236",
+			"label": "Type",
+			"name": "type",
+			"type": "select",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"choices": {
+				"prophet": "Prophet",
+				"apostle": "Apostle",
+				"general-authority": "General Authority"
+			},
+			"default_value": {
+				"apostle": "apostle"
+			},
+			"allow_null": 0,
+			"multiple": 0,
+			"ui": 0,
+			"ajax": 0,
+			"placeholder": "",
+			"disabled": 0,
+			"readonly": 0,
+			"return_format": "value"
+		},
+		{
+			"key": "field_5571f985c9e02",
+			"label": "Living",
+			"name": "living",
+			"type": "true_false",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"message": "Currently Living",
+			"default_value": 0,
+			"ui": 0,
+			"ui_on_text": "",
+			"ui_off_text": ""
+		},
+		{
+			"key": "field_5522d866a7110",
+			"label": "Current Position",
+			"name": "position",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5571f985c9e02",
+					"operator": "==",
+					"value": "1"
+				}]
+			],
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d7e7a710b",
+			"label": "Birthdate",
+			"name": "birthdate",
+			"type": "date_picker",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"display_format": "F j, Y",
+			"return_format": "F j, Y",
+			"first_day": 0
+		},
+		{
+			"key": "field_5522d87ca7111",
+			"label": "Ordained Date",
+			"name": "ordained_date",
+			"type": "date_picker",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"display_format": "F j, Y",
+			"return_format": "F j, Y",
+			"first_day": 0
+		},
+		{
+			"key": "field_5523e64e47c59",
+			"label": "President Date",
+			"name": "president_date",
+			"type": "date_picker",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5523e2d7a6236",
+					"operator": "==",
+					"value": "prophet"
+				}]
+			],
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"display_format": "F j, Y",
+			"return_format": "F j, Y",
+			"first_day": 0
+		},
+		{
+			"key": "field_5522d899a7112",
+			"label": "Death Date",
+			"name": "death_date",
+			"type": "date_picker",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5571f985c9e02",
+					"operator": "!=",
+					"value": "1"
+				}]
+			],
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"display_format": "F j, Y",
+			"return_format": "F j, Y",
+			"first_day": 0
+		},
+		{
+			"key": "field_5522d8a6a7113",
+			"label": "Hometown",
+			"name": "hometown",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5523ea87accc8",
+			"label": "Ordained at Age",
+			"name": "ordained_at_age",
+			"type": "number",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"min": "",
+			"max": "",
+			"step": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5523ea96accc9",
+			"label": "Prophet at Age",
+			"name": "prophet_at_age",
+			"type": "number",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5523e2d7a6236",
+					"operator": "==",
+					"value": "prophet"
+				}]
+			],
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"min": "",
+			"max": "",
+			"step": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5523ea9faccca",
+			"label": "Age (or age at Death)",
+			"name": "died_at_age",
+			"type": "number",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5571f985c9e02",
+					"operator": "!=",
+					"value": "1"
+				}]
+			],
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"min": "",
+			"max": "",
+			"step": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5571f9aec9e03",
+			"label": "Excommunicated",
+			"name": "excommunicated",
+			"type": "true_false",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"message": "Excommunicated or term ended before death?",
+			"default_value": 0,
+			"ui": 0,
+			"ui_on_text": "",
+			"ui_off_text": ""
+		},
+		{
+			"key": "field_5571fbcfc9e04",
+			"label": "Term End Date",
+			"name": "excommunication_date",
+			"type": "date_picker",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5571f9aec9e03",
+					"operator": "==",
+					"value": "1"
+				}]
+			],
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"display_format": "F j, Y",
+			"return_format": "F j, Y",
+			"first_day": 0
+		},
+		{
+			"key": "field_55782723bae4c",
+			"label": "Readmitted Date",
+			"name": "readmitted_date",
+			"type": "date_picker",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5571f9aec9e03",
+					"operator": "==",
+					"value": "1"
+				}]
+			],
+			"wrapper": {
+				"width": 25,
+				"class": "",
+				"id": ""
+			},
+			"display_format": "F j, Y",
+			"return_format": "F j, Y",
+			"first_day": 0
+		},
+		{
+			"key": "field_5523e5c347c57",
+			"label": "Seniority",
+			"name": "quorum_seniority",
+			"type": "number",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5571f985c9e02",
+					"operator": "==",
+					"value": "1"
+				}]
+			],
+			"wrapper": {
+				"width": "50",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"min": "",
+			"max": "",
+			"step": ""
+		},
+		{
+			"key": "field_5523e61747c58",
+			"label": "Prophet Number",
+			"name": "prophet_number",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5523e2d7a6236",
+					"operator": "==",
+					"value": "prophet"
+				}]
+			],
+			"wrapper": {
+				"width": 50,
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "2nd",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d90fa711c",
+			"label": "Reason Called",
+			"name": "reason_called",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5576e6c359903",
+			"label": "Reason Terminated",
+			"name": "reason_terminated",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": [
+				[{
+					"field": "field_5571f9aec9e03",
+					"operator": "==",
+					"value": "1"
+				}]
+			],
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "Excommunicated",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d8e6a7117",
+			"label": "Conference Talks",
+			"name": "conference_talks",
+			"type": "number",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"min": "",
+			"max": "",
+			"step": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d8f3a7118",
+			"label": "Profession",
+			"name": "profession",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d8fca7119",
+			"label": "Military",
+			"name": "military",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d904a711a",
+			"label": "Education",
+			"name": "education",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d908a711b",
+			"label": "Mission",
+			"name": "mission",
+			"type": "text",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"maxlength": "",
+			"readonly": 0,
+			"disabled": 0
+		},
+		{
+			"key": "field_5522d8ada7114",
+			"label": "Main Image",
+			"name": "main_image",
+			"type": "image",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array",
+			"preview_size": "medium",
+			"library": "all",
+			"min_width": "",
+			"min_height": "",
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": "",
+			"mime_types": ""
+		},
+		{
+			"key": "field_5522d8cba7115",
+			"label": "Youth Image",
+			"name": "youth_image",
+			"type": "image",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "array",
+			"preview_size": "thumbnail",
+			"library": "all",
+			"min_width": "",
+			"min_height": "",
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": "",
+			"mime_types": ""
+		},
+		{
+			"key": "field_5522d8d7a7116",
+			"label": "Latest Image",
+			"name": "latest_image",
+			"type": "image",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"return_format": "url",
+			"preview_size": "thumbnail",
+			"library": "all",
+			"min_width": "",
+			"min_height": "",
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": "",
+			"mime_types": ""
+		},
+		{
+			"key": "field_55252f3215a88",
+			"label": "Images",
+			"name": "images",
+			"type": "gallery",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"min": "",
+			"max": "",
+			"preview_size": "thumbnail",
+			"library": "all",
+			"min_width": "",
+			"min_height": "",
+			"min_size": "",
+			"max_width": "",
+			"max_height": "",
+			"max_size": "",
+			"mime_types": "",
+			"insert": "append"
+		},
+		{
+			"key": "field_5571f7d8d4bcc",
+			"label": "Positions",
+			"name": "positions",
+			"type": "repeater",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"min": 0,
+			"max": 0,
+			"layout": "table",
+			"button_label": "Add Position",
+			"sub_fields": [{
+					"key": "field_5571f835d4bcf",
+					"label": "Position",
+					"name": "position",
+					"type": "select",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": 33,
+						"class": "",
+						"id": ""
+					},
+					"choices": {
+						"President of The Church of Jesus Christ of Latter-day Saints": "President of The Church of Jesus Christ of Latter-day Saints",
+						"First Counselor, First Presidency": "First Counselor, First Presidency",
+						"Second Counselor, First Presidency": "Second Counselor, First Presidency",
+						"Counselor in the First Presidency": "Counselor in the First Presidency",
+						"President of the Quorum of the Twelve Apostles": "President of the Quorum of the Twelve Apostles",
+						"Acting President of the Quorum of the Twelve Apostles": "Acting President of the Quorum of the Twelve Apostles",
+						"Assistant to the Quorum of the Twelve Apostles": "Assistant to the Quorum of the Twelve Apostles"
+					},
+					"default_value": {
+						"": ""
+					},
+					"allow_null": 0,
+					"multiple": 0,
+					"ui": 0,
+					"ajax": 0,
+					"placeholder": "",
+					"disabled": 0,
+					"readonly": 0,
+					"return_format": "value"
+				},
+				{
+					"key": "field_5571f7e2d4bcd",
+					"label": "Position Start Date",
+					"name": "position_start_date",
+					"type": "date_picker",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": 33,
+						"class": "",
+						"id": ""
+					},
+					"display_format": "F j, Y",
+					"return_format": "F j, Y",
+					"first_day": 0
+				},
+				{
+					"key": "field_5571f81cd4bce",
+					"label": "Position End Date",
+					"name": "position_end_date",
+					"type": "date_picker",
+					"instructions": "",
+					"required": 0,
+					"conditional_logic": 0,
+					"wrapper": {
+						"width": 33,
+						"class": "",
+						"id": ""
+					},
+					"display_format": "F j, Y",
+					"return_format": "F j, Y",
+					"first_day": 0
+				}
+			],
+			"collapsed": ""
+		},
+		{
+			"key": "field_5c1a3ae6d65b5",
+			"label": "Polygamist?",
+			"name": "polygamist",
+			"type": "true_false",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"message": "This leader had\/has multiple wives.",
+			"default_value": 0,
+			"ui": 0,
+			"ui_on_text": "",
+			"ui_off_text": ""
+		},
+		{
+			"key": "field_5c1a3b4bd65b6",
+			"label": "Number of Wives",
+			"name": "number_of_wives",
+			"type": "number",
+			"instructions": "",
+			"required": 0,
+			"conditional_logic": 0,
+			"wrapper": {
+				"width": "",
+				"class": "",
+				"id": ""
+			},
+			"default_value": "",
+			"placeholder": "",
+			"prepend": "",
+			"append": "",
+			"min": "",
+			"max": "",
+			"step": ""
+		}
+	],
+	"location": [
+		[{
+			"param": "post_type",
+			"operator": "==",
+			"value": "leader"
+		}]
+	],
+	"menu_order": 0,
+	"position": "normal",
+	"style": "default",
+	"label_placement": "top",
+	"instruction_placement": "label",
+	"hide_on_screen": [
+		"the_content",
+		"excerpt",
+		"discussion",
+		"comments",
+		"author",
+		"format",
+		"page_attributes",
+		"categories",
+		"tags",
+		"send-trackbacks"
+	],
+	"active": 1,
+	"description": ""
+}]
