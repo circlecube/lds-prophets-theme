@@ -47,7 +47,7 @@ if ( false === ( $leader_table_polygamy = get_transient( 'leader_table_polygamy'
 					<th>Img</th>
 					<th>Name</th>
 					<th>Birthdate</th>
-					<th>Ordained</th
+					<th>Ordained</th>
 					<th>Number of Wives</th>
 					<th>Seniority</th>
 					<th>Prophet</th>
