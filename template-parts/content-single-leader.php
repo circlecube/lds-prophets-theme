@@ -63,9 +63,9 @@
 				<?php } ?>
 			<?php } ?>
 			
-			<?php if ( get_field('conference_talks') ) { ?>
-				<dt>Conference Talks</dt>
-				<dd><?php the_field('conference_talks'); ?></dd>
+			<?php if ( get_field('polygamist') ) { ?>
+				<dt>Number of Wives</dt>
+				<dd><?php the_field('number_of_wives'); ?></dd>
 			<?php } ?>
 			
 			<?php if ( get_field('profession') ) { ?>
